@@ -4,6 +4,14 @@
 </head>
 <body>
   <h1>メモ</h1>
+
+  <nav>
+    <ul>
+      <% @memos.each do |memo| %>
+        <li><%= memo %></li>
+      <% end %>
+    </ul>
+  </nav>
   <nav>
     <ul>
       <li><a href="/new">新規メモ</a></li>
