@@ -4,11 +4,11 @@
 </head>
 <body>
   <h1>メモ</h1>
-
   <nav>
     <ul>
       <% @memos.each do |memo| %>
-        <li><%= memo %></li>
+        <% memo = Memo.new(memo) %>
+        <li><a href="/<%= memo.title %>"><%= memo.title %></a></li>
       <% end %>
     </ul>
   </nav>

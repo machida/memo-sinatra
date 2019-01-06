@@ -4,14 +4,17 @@
 </head>
 <body>
   <h1>メモ</h1>
+
+  <% @memo = Memo.new(@memo) %>
   <div>
     <div>
-      title: <%=@title%>
+      title:
+      <%= @memo.title %>
     </div>
     <div>
       本文:
       <p>
-        <%=@body%>
+      <%= @memo.body %>
       </p>
     </div>
   </div>
