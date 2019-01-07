@@ -1,0 +1,11 @@
+h1 = @title
+form action="update" method="POST"
+  div
+    | title:
+    input name="title" type="text" value="#{@memo.title}"
+  div
+    | 本文:
+    textarea name="body" rows="5"
+      = @memo.body
+  div
+    input type="submit" value="送信する"
