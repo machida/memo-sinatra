@@ -1,8 +1,14 @@
-h1 メモ
 div
   div
-    | title:
-    = @memo.title
+    h1 = @memo.title
   div
-    | 本文:
-    = @memo.body
+    == markdown(@memo.body)
+
+nav
+  ul
+    li
+      a(href= "/#{@memo.id}/edit")
+        | edit
+    li
+      a(href= "/#{@memo.id}/delete")
+        | delete
